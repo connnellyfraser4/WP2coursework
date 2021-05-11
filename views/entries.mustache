@@ -1,0 +1,41 @@
+<head>
+{{>header}}
+</head>
+<body>
+ <h1>{{title}}</h1>
+ {{#entries}}
+ <div>
+ Name: {{name}}
+ </div>
+ <div>
+ Activity: {{activity}}
+ </div>
+ <div>
+ Duration: {{duration}}
+ </div>
+ <div>
+ Written by {{name}} , on {{published}}
+ </div>
+ <hr>
+ {{/entries}}
+ {{^entries}}
+ No entries yet.
+ {{/entries}} 
+<div class="text-right" style="margin-bottom: 1em;">
+ {{^user}}
+ <a id="login" href="/login" class="btn btn-primary">
+ Sign in
+ </a>
+ <a id="register" href="/register" class="btn btn-primary">
+ Register
+ </a>
+ 
+ 
+ <a id="logout" href="/logout" class="btn btn-primary">
+ Sign out
+ </a>
+ {{/user}}
+ </div>
+
+</body>
+</html>
